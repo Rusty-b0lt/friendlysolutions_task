@@ -7,6 +7,7 @@ Friendly solutions test task
 Run inside container:  
 ``python manage.py migrate``  
 ## REST API
+Main endpoint:  
 http://localhost:8000/api/v1/image/
 #### Import from api (by album cause all images is too much):
 ``POST``
