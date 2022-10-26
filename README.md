@@ -26,6 +26,6 @@ Run commands inside docker container
 ``python manage.py import_from_file ./example.json``
 
 ## Notes
-1. I used the [ColorThief](https://github.com/lokesh/color-thief) library for determining the dominant color and the hex doesn't exactly match the name of files in the API you provided, but i checked the some of the images from this API in online tools that do the same thing & they match my hex & not the one in the name of files, so i hope that's ok because the rgb values are almost identical.
+1. I used the [ColorThief](https://github.com/lokesh/color-thief) library for determining the dominant color and the hex doesn't exactly match the name of files in the API you provided, but i uploaded some of the images from this API to online tools that do the same thing & they match my hex & not the one in the name of files, so i hope that's ok because the rgb values are almost identical.
 2. I made the import from API take ``albumId`` as an argument and download only 50 images, if the task is to download all 1000 images, i can add celery to the project & use an async task for that.
 3. Thank you if you read all this! I hope for some feedback on this. I tried to do this as fast as possible, so i think some things can be improved!
