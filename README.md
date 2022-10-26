@@ -9,7 +9,7 @@ Run inside container:
 ## REST API
 #### Main endpoint:  
 http://localhost:8000/api/v1/image/
-#### Import from api (by album cause all images is too much):
+#### Import from api (i made import by album cause all 1000 images is too much):
 ``POST``
 ``{"albumId": <id>}``  
 http://localhost:8000/api/v1/image/import_from_api/
