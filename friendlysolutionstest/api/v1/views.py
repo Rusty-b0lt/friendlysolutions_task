@@ -3,6 +3,7 @@ import json
 import requests
 from rest_framework import viewsets, status
 from rest_framework.decorators import action
+from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 
 from friendlysolutionstest.api.helpers import parse_json, import_from_json
@@ -34,7 +35,7 @@ class ImageViewSet(viewsets.ModelViewSet):
         num = import_from_json(data)
         return Response({'detail': f'Successfully imported {num} images.'}, status=status.HTTP_201_CREATED)
 
-    @action(detail=False, methods=['post'])
+    @action(detail=False, methods=['post'], parser_classes=[JSONParser])
     def import_from_file(self, request):
         if len(request.data) == 0:
             return Response({'detail': 'Empty file.'}, status=status.HTTP_400_BAD_REQUEST)
